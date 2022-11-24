@@ -39,7 +39,6 @@ export default{
 
 @use '../styles/partials/variables' as *;
 
-
 .jumbotron{
   height: $jumbo-height;
   display: flex;
@@ -82,7 +81,7 @@ h1, p{
   left: 50%;
   top: 0;
   width: 50%;
-  aspect-ratio: 1.8/1;
+  aspect-ratio: 1.7/1;
   img{
     position: absolute;
   }
