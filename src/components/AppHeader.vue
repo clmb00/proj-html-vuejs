@@ -1,7 +1,11 @@
 <script>
 
 export default{
-  name: 'AppHeader'
+  name: 'AppHeader',
+  props:{
+    menuItems: Array,
+    active: String
+  }
 }
 
 </script>
@@ -17,12 +21,7 @@ export default{
     <nav id="header_nav">
 
       <ul class="menu_nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Pages</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Elements</a></li>
+        <li v-for="(elem, index) in menuItems" :key="index" :class="{'active_class' : elem == active}"><a href="#" @click="active = elem">{{elem}}</a></li>
       </ul>
 
       <button class="menu_icon">
@@ -53,11 +52,25 @@ header{
 }
 
 #header_nav{
-  --spacing-btw-elements: 50px;
+  --spacing-btw-elements: 46px;
   display: flex;
   .menu_nav{
     display: flex;
     column-gap: var(--spacing-btw-elements);
+    li{
+      padding-inline: 2px;
+      position: relative;
+      &.active_class::after{
+        content: '';
+        width: 100%;
+        height: 25%;
+        background-color: $back-pink-dark;
+        position: absolute;
+        bottom: 25%;
+        left: 0;
+        z-index: -1;
+      }
+    }
     a{
       text-transform: uppercase;
       font-size: .8rem;

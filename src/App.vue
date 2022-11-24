@@ -6,6 +6,12 @@ import AppFooter from './components/AppFooter.vue';
 
 export default{
   name: 'App',
+  data(){
+    return{
+      headerMenuItems: ['home', 'pages', 'portfolio', 'blog', 'shop', 'elements'],
+      activePage: 'home'
+    }
+  },
   components:{
     AppHeader,
     AppMain,
@@ -17,7 +23,7 @@ export default{
 
 <template>
 
-  <AppHeader/>
+  <AppHeader :menuItems="headerMenuItems" :active="activePage"/>
   <AppMain/>
   <AppFooter/>
 
