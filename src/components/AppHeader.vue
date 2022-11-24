@@ -52,7 +52,7 @@ header{
 }
 
 #header_nav{
-  --spacing-btw-elements: 46px;
+  --spacing-btw-elements: 44px;
   display: flex;
   .menu_nav{
     display: flex;
@@ -70,12 +70,12 @@ header{
         left: 0;
         z-index: -1;
       }
-    }
-    a{
-      text-transform: uppercase;
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .2rem;
+      a{
+        text-transform: uppercase;
+        font-size: .8rem;
+        font-weight: 700;
+        letter-spacing: .2rem;
+      }
     }
   }
   .menu_icon{
