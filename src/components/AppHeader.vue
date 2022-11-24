@@ -60,7 +60,7 @@ header{
     li{
       padding-inline: 2px;
       position: relative;
-      &.active_class::after{
+      &::before{
         content: '';
         width: 100%;
         height: 25%;
@@ -69,6 +69,11 @@ header{
         bottom: 25%;
         left: 0;
         z-index: -1;
+        transform: translateX(-50%) scaleX(0);
+        transition: transform .8s ease;
+      }
+      &.active_class::before{
+        transform: translateX(0%) scaleX(1);
       }
       a{
         text-transform: uppercase;
