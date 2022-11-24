@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/mulish": "^4.5.13",
+    "@fontsource/playfair-display": "^4.5.12",
     "vue": "^3.2.41"
   },
   "devDependencies": {

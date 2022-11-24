@@ -1,3 +1,9 @@
+@use './partials/variables' as *;
+
+@import 'node_modules/@fontsource/mulish/400.css';
+@import 'node_modules/@fontsource/mulish/700.css';
+@import 'node_modules/@fontsource/playfair-display/800-italic.css';
+
 // RESET
 *{
   box-sizing: border-box;
@@ -9,12 +15,24 @@ html, body {
   height: 100%;
 }
 
+body{
+  font-family: $primary-font;
+  background-color: $white;
+}
+
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 ul, ol{
   list-style: none;
 }
 
 a{
   text-decoration: none;
+  color: $black;
 }
 
 img, picture, video, canvas, svg {
