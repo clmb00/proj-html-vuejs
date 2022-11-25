@@ -64,19 +64,35 @@ body{
   font-weight: 700;
   padding: 16px 30px;
   border: 2px solid black;
-  transition: all .3s ease-out;
-  transition-property: background-color, color, border-color;
+  transition: color .4s ease, background-color .4s ease, border-color .4s ease, scale .05s ease;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%) scaleX(0);
+    z-index: -1;
+    transition: transform .4s ease;
+  }
   &.btn_pink{
     border-color: $back-pink-dark;
-    &:hover{
+    &::before{   
       background-color: $back-pink-dark;
+    }
+    &:hover{
       color: white;
+      &::before{
+        transform: translateX(0) scaleX(1);
+      }
     }
     &:active{
       transform: scale(.96);
     }
   }
-  &.btn_green{
+  &.btn_green_with_back{
     background-color: $back-green-light;
     border-color: $back-green-light;
     &:hover{
