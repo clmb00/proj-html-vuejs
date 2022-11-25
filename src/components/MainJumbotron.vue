@@ -1,7 +1,26 @@
 <script>
 
+import CompSlide from './CompSlide.vue';
+
 export default{
-  name: 'MainJumbotron'
+  name: 'MainJumbotron',
+  components:{
+    CompSlide,
+  },
+  data(){
+    return{
+      indexSlider: 1
+    }
+  },
+  methods:{
+    slide(direction){
+      if (direction == 'left'){
+        if (--this.indexSlider == 0) this.indexSlider = 3
+      } else {
+        if (++this.indexSlider == 4) this.indexSlider = 1
+      };
+    }
+  }
 }
 </script>
 
@@ -9,27 +28,46 @@ export default{
 
   <div class="jumbotron">
 
-    <div class="container">
-
-      <div class="text_content">
-        <h1>Devotion that never <span class="accent_text">ends</span></h1>
-        <p class="content_text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
-        <button class="btn btn_pink">Read more</button>
-      </div>
-
+    <div class="arrow arrow_left" @click="slide('left')">
+      <i class="fa-solid fa-chevron-left"></i>
     </div>
 
-    <div class="images_content">
-      <img id="img_13" src="../assets/img/h-2-slider-img-13.png" alt="">
-      <img id="img_15" src="../assets/img/h-2-slider-img-15.png" alt="">
-      <img id="img_16" src="../assets/img/h-2-slider-img-16.png" alt="">
-      <img id="img_17" src="../assets/img/h-2-slider-img-17.png" alt="">
-      <img id="img_12" src="../assets/img/h-2-slider-img-12.png" alt="">
-      <img id="img_14" src="../assets/img/h-2-slider-img-14.png" alt="">
-      <img id="img_01" src="../assets/svg/svg-0.svg" alt="">
-      <img id="img_02" src="../assets/svg/svg-0.svg" alt="">
+    <CompSlide
+      title="Devotion that never " 
+      accentTitle="ends"
+      descr="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi." 
+      button="Read more" 
+      :indexSlider="indexSlider" 
+      :slideNumber="1"
+    />
+
+    <CompSlide
+      title="Inspiration that never " 
+      accentTitle="stop"
+      descr="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi." 
+      button="Find more" 
+      :indexSlider="indexSlider" 
+      :slideNumber="2"
+    />
+
+    <CompSlide
+      title="Designs made with " 
+      accentTitle="love"
+      descr="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi." 
+      button="Read more" 
+      :indexSlider="indexSlider" 
+      :slideNumber="3"
+    />
+
+    <div class="arrow arrow_right" @click="slide('right')">
+      <i class="fa-solid fa-chevron-right"></i>
     </div>
 
+    <div class="pagSlider">
+      <div class="pag" :class="{'active' : indexSlider == 1}" @click="indexSlider = 1"></div>
+      <div class="pag" :class="{'active' : indexSlider == 2}" @click="indexSlider = 2"></div>
+      <div class="pag" :class="{'active' : indexSlider == 3}" @click="indexSlider = 3"></div>
+    </div>
 
   </div>
 
@@ -41,84 +79,50 @@ export default{
 
 .jumbotron{
   height: $jumbo-height;
-  display: flex;
-  align-items: center;
   position: relative;
-  // temporary debug
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 
-.text_content{
-  width: 50%;
-  padding-right: 1rem;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-h1{
-  font-size: 5rem;
-  font-weight: 300;
-  line-height: 5rem;
-  // Per allinearlo al p e button, visto che il font size grande sposta l'inizio delle prime lettere del h1
-  margin-left: -3px;
-}
-
-h1, p{
-  margin-bottom: 40px;
-}
-
-.images_content{
+.arrow{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  background-color: $back-pink-normal;
+  color: white;
+  top: calc(50% - 15px);
   position: absolute;
-  left: 50%;
-  top: 0;
-  width: 50%;
-  aspect-ratio: 1.7/1;
-  img{
-    position: absolute;
+  z-index: 998;
+  cursor: pointer;
+  &.arrow_left{
+    left: 2rem;
   }
-  #img_13{
-    height: 15%;
-    bottom: 0;
-    left: 2%;
+  &.arrow_right{
+    right: 2rem;
   }
-  #img_15{
-    height: 80%;
-    bottom: 0;
-    right: 55%;
-  }
-  #img_16{
-    height: 80%;
-    bottom: 0;
-    left: 40%;
-  }
-  #img_17{
-    height: 25%;
-    bottom: 0;
-    right: 15%;
-  }
-  #img_12{
-    height: 8%;
-    bottom: 40%;
-    left: -2%;
-  }
-  #img_14{
-    height: 12%;
-    top: 8%;
-    left: 65%;
-  }
-  #img_01{
-    height: 10%;
-    top: 10%;
-    left: 8%;
-    transform: scale(-1, 1)
-  }
-  #img_02{
-    height: 10%;
-    top: 30%;
-    right: 25%;
+}
+
+.pagSlider{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+  cursor: pointer;
+  user-select: none;
+  .pag{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $back-pink-normal;
+    transition: all .4s ease;
+    &.active{
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
