@@ -15,7 +15,9 @@ export default{
   <header>
 
     <div id="header_logo">
-      <img src="../assets/img/logo-sidearea-1.png" alt="Marée Logo">
+      <a href="#">
+        <img src="../assets/img/logo-sidearea-1.png" alt="Marée Logo">
+      </a>
     </div>
 
     <nav id="header_nav">

@@ -26,7 +26,8 @@ export default{
 @use '../styles/partials/variables' as *;
 
 section{
-  background-color: $back-pink-light;
+  background-image: url(../assets/img/contact-back-img-1.png);
+  background-size: cover;
   padding-top: 150px;
   padding-bottom: 100px;
 }

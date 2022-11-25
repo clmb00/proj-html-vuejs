@@ -64,7 +64,7 @@ body{
   font-weight: 700;
   padding: 16px 30px;
   border: 2px solid black;
-  transition: all .4s ease-out;
+  transition: all .3s ease-out;
   transition-property: background-color, color, border-color;
   &.btn_pink{
     border-color: $back-pink-dark;

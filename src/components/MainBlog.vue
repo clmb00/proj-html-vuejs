@@ -65,6 +65,7 @@ export default{
 article{
   width: 32%;
   position: relative;
+  cursor: pointer;
   img{
     max-height: 260px;
   }

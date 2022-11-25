@@ -22,7 +22,9 @@ export default{
 
       <div class="footer_logo">
         <div class="logo">
-          <img src="../assets/img/logo-sidearea-1.png" alt="">
+          <a href="#">
+            <img src="../assets/img/logo-sidearea-1.png" alt="">
+          </a>
         </div>
         <p>Let's Get Creative</p>
       </div>
