@@ -6,6 +6,8 @@
 @import 'node_modules/@fontsource/playfair-display/400-italic.css';
 @import 'node_modules/@fontsource/playfair-display/800-italic.css';
 
+@import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
 // RESET
 *{
   box-sizing: border-box;
@@ -74,4 +76,9 @@ body{
       transform: scale(.96);
     }
   }
+}
+
+span.accent_text{
+  font-weight: 700;
+  font-family: $accent-font;
 }

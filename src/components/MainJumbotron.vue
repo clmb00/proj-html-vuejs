@@ -12,7 +12,7 @@ export default{
     <div class="container">
 
       <div class="text_content">
-        <h1>Devotion that never <span>ends</span></h1>
+        <h1>Devotion that never <span class="accent_text">ends</span></h1>
         <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
         <button class="btn btn-pink">Read more</button>
       </div>
@@ -44,6 +44,8 @@ export default{
   display: flex;
   align-items: center;
   position: relative;
+  // temporary debug
+  margin-bottom: 100px;
 }
 
 .text_content{
@@ -62,10 +64,6 @@ h1{
   line-height: 5rem;
   // Per allinearlo al p e button, visto che il font size grande sposta l'inizio delle prime lettere del h1
   margin-left: -3px;
-  span{
-    font-weight: 700;
-    font-family: $accent-font;
-  }
 }
 
 p{

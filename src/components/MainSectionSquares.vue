@@ -71,6 +71,7 @@ export default{
     overflow: hidden;
     img{
       min-height: 100%;
+      transition: all .5s ease;
     }
   }
   .sq_descr{
@@ -95,8 +96,14 @@ export default{
     }
   }
 
-  .square:hover .sq_descr{
-    transform: translateX(0) scaleX(1);
+  .square:hover{
+    & img{
+      transform: scale(1.1);
+      filter: brightness(.9);
+    }
+    & .sq_descr{
+      transform: translateX(0) scaleX(1);
+    }
   }
 }
 
