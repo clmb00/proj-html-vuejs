@@ -8,14 +8,17 @@ export default{
     descr: String,
     button: String,
     indexSlider: Number,
-    slideNumber: Number
+    slideNumber: Number,
+    next: Number,
+    prev: Number,
+    direction: String
   }
 }
 </script>
 
 <template>
 
-  <div class="slide" :class="{'active' : indexSlider == slideNumber}">
+  <div class="slide" :class="{'active' : indexSlider == slideNumber, 'next' : next == slideNumber, 'prev' : prev == slideNumber}">
 
     <div class="container">
       <div class="text_content">
@@ -48,15 +51,26 @@ export default{
 @use '../styles/partials/variables' as *;
 
 .slide{
+  width: 100%;
   height: 100%;
-  display: flex;
+  // flex-shrink: 0;
   align-items: center;
   position: relative;
-  opacity: 0;
-  display: none;
+  // display: none;
+  transition: transform 1s ease, visibility 1s ease;
+  background-color: white;
+  position: absolute;
   &.active{
-    display: block;
-    opacity: 1;
+    transform: translateX(0%);
+    z-index: 500;
+  }
+  &.next{
+    transform: translateX(100%);
+    visibility: hidden;
+  }
+  &.prev{
+    transform: translateX(-100%);
+    visibility: hidden;
   }
 }
 
@@ -87,6 +101,7 @@ h1, p{
   left: 50%;
   top: 0;
   width: 50%;
+  max-height: $jumbo-height;
   aspect-ratio: 1.7/1;
   img{
     position: absolute;
@@ -146,7 +161,7 @@ h1, p{
   .img_C1{
     display: block;
     height: 80%;
-    bottom: -7%;
+    bottom: 0;
     left: 13%;
   }
 }

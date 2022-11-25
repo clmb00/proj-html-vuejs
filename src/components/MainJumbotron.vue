@@ -9,16 +9,35 @@ export default{
   },
   data(){
     return{
-      indexSlider: 1
+      indexSlider: 1,
+      nextSlider: 2,
+      prevSlider: 3,
+      directionSlides: '',
+      onTimeout: false
     }
   },
   methods:{
     slide(direction){
-      if (direction == 'left'){
-        if (--this.indexSlider == 0) this.indexSlider = 3
-      } else {
-        if (++this.indexSlider == 4) this.indexSlider = 1
-      };
+      if (!this.onTimeout){
+        if (direction == 'left'){
+          if (--this.indexSlider == 0) this.indexSlider = 3
+          if (--this.nextSlider == 0) this.nextSlider = 3
+          if (--this.prevSlider == 0) this.prevSlider = 3
+          this.directionSlides = direction
+        } else {
+          if (++this.indexSlider == 4) this.indexSlider = 1
+          if (++this.nextSlider == 4) this.nextSlider = 1
+          if (++this.prevSlider == 4) this.prevSlider = 1
+          this.directionSlides = direction
+        };
+        this.startTimeOut()
+      }
+    },
+    startTimeOut(){
+      this.onTimeout = true
+      setTimeout(()=>{
+        this.onTimeout = false
+      }, 1000)
     }
   }
 }
@@ -38,7 +57,10 @@ export default{
       descr="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi." 
       button="Read more" 
       :indexSlider="indexSlider" 
-      :slideNumber="1"
+      :slideNumber="1" 
+      :next="nextSlider" 
+      :prev="prevSlider" 
+      :direction="directionSlides"
     />
 
     <CompSlide
@@ -47,7 +69,10 @@ export default{
       descr="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi." 
       button="Find more" 
       :indexSlider="indexSlider" 
-      :slideNumber="2"
+      :slideNumber="2" 
+      :next="nextSlider" 
+      :prev="prevSlider" 
+      :direction="directionSlides"
     />
 
     <CompSlide
@@ -56,19 +81,22 @@ export default{
       descr="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi." 
       button="Read more" 
       :indexSlider="indexSlider" 
-      :slideNumber="3"
+      :slideNumber="3" 
+      :next="nextSlider" 
+      :prev="prevSlider" 
+      :direction="directionSlides"
     />
 
     <div class="arrow arrow_right" @click="slide('right')">
       <i class="fa-solid fa-chevron-right"></i>
     </div>
+  
+  </div>
 
-    <div class="pagSlider">
-      <div class="pag" :class="{'active' : indexSlider == 1}" @click="indexSlider = 1"></div>
-      <div class="pag" :class="{'active' : indexSlider == 2}" @click="indexSlider = 2"></div>
-      <div class="pag" :class="{'active' : indexSlider == 3}" @click="indexSlider = 3"></div>
-    </div>
-
+  <div class="pagSlider">
+    <div class="pag" :class="{'active' : indexSlider == 1}"></div>
+    <div class="pag" :class="{'active' : indexSlider == 2}"></div>
+    <div class="pag" :class="{'active' : indexSlider == 3}"></div>
   </div>
 
 </template>
@@ -80,7 +108,10 @@ export default{
 .jumbotron{
   height: $jumbo-height;
   position: relative;
-  margin-bottom: 90px;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .arrow{
@@ -105,6 +136,7 @@ export default{
 
 .pagSlider{
   width: 100%;
+  height: 110px;
   padding-top: 50px;
   padding-bottom: 40px;
   margin: 0px auto;
