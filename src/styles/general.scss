@@ -44,6 +44,10 @@ input, button, textarea, select {
 }
 // ---
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: $primary-font;
   background-color: $white;

@@ -3,6 +3,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import AppScrollUp from './components/AppScrollUp.vue';
 
 export default{
   name: 'App',
@@ -21,7 +22,8 @@ export default{
   components:{
     AppHeader,
     AppMain,
-    AppFooter
+    AppFooter,
+    AppScrollUp
   }
 }
 
@@ -32,6 +34,8 @@ export default{
   <AppHeader :menuItems="headerMenuItems" :active="activePage"/>
   <AppMain/>
   <AppFooter :contacts="contacts"/>
+
+  <AppScrollUp/>
 
 </template>
 
