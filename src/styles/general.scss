@@ -90,12 +90,12 @@ body{
   }
 }
 
-span.accent_text{
+.accent_text{
   font-weight: 700;
   font-family: $accent-font;
 }
 
-p.content_text{
+.content_text{
   color: $text-grey-dark;
   line-height: 1.5rem;
 }
