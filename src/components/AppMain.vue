@@ -23,25 +23,15 @@ export default{
   
   <main>
 
-    <div class="jumbo_container">
-      <MainJumbotron/>
-    </div>
+    <MainJumbotron/>
 
-    <section>
-      <MainSectionSquares/>
-    </section>
+    <MainSectionSquares/>
 
-    <section>
-      <MainSectionProcess/>
-    </section>
+    <MainSectionProcess/>
 
-    <section>
-      <MainContactUs/>
-    </section>
+    <MainContactUs/>
 
-    <section>
-      <MainBlog/>
-    </section>
+    <MainBlog/>
 
   </main>
 

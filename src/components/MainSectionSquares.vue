@@ -8,50 +8,55 @@ export default{
 
 <template>
 
-  <div class="squares_container">
-    <div class="square">
-      <img src="../assets/img/h-2-port-img-1.jpg" alt="">
-      <div class="sq_descr">
-        <h3>Designs of Logos</h3>
-        <p>Design</p>
+  <section>
+
+    <div class="squares_container">
+      <div class="square">
+        <img src="../assets/img/h-2-port-img-1.jpg" alt="">
+        <div class="sq_descr">
+          <h3>Designs of Logos</h3>
+          <p>Design</p>
+        </div>
+      </div>
+      <div class="square">
+        <img src="../assets/img/h-2-port-img-2.jpg" alt="">
+        <div class="sq_descr">
+          <h3>Graphics of cartoons</h3>
+          <p>Graphics</p>
+        </div>
+      </div>
+      <div class="square">
+        <img src="../assets/img/h-2-port-img-3.jpg" alt="">
+        <div class="sq_descr">
+          <h3>Illustrations of books</h3>
+          <p>Illustration</p>
+        </div>
+      </div>
+      <div class="square">
+        <img src="../assets/img/h-2-port-img-4.jpg" alt="">
+        <div class="sq_descr">
+          <h3>Illustrations of novels</h3>
+          <p>Illustration</p>
+        </div>
+      </div>
+      <div class="square">
+        <img src="../assets/img/h-2-port-img-5.jpg" alt="">
+        <div class="sq_descr">
+          <h3>Designs of apps</h3>
+          <p>Design</p>
+        </div>
+      </div>
+      <div class="square">
+        <img src="../assets/img/h-2-port-img-6.jpg" alt="">
+        <div class="sq_descr">
+          <h3>Graphics of characters</h3>
+          <p>Graphic</p>
+        </div>
       </div>
     </div>
-    <div class="square">
-      <img src="../assets/img/h-2-port-img-2.jpg" alt="">
-      <div class="sq_descr">
-        <h3>Graphics of cartoons</h3>
-        <p>Graphics</p>
-      </div>
-    </div>
-    <div class="square">
-      <img src="../assets/img/h-2-port-img-3.jpg" alt="">
-      <div class="sq_descr">
-        <h3>Illustrations of books</h3>
-        <p>Illustration</p>
-      </div>
-    </div>
-    <div class="square">
-      <img src="../assets/img/h-2-port-img-4.jpg" alt="">
-      <div class="sq_descr">
-        <h3>Illustrations of novels</h3>
-        <p>Illustration</p>
-      </div>
-    </div>
-    <div class="square">
-      <img src="../assets/img/h-2-port-img-5.jpg" alt="">
-      <div class="sq_descr">
-        <h3>Designs of apps</h3>
-        <p>Design</p>
-      </div>
-    </div>
-    <div class="square">
-      <img src="../assets/img/h-2-port-img-6.jpg" alt="">
-      <div class="sq_descr">
-        <h3>Graphics of characters</h3>
-        <p>Graphic</p>
-      </div>
-    </div>
-  </div>
+
+  </section>
+
 
 </template>
 

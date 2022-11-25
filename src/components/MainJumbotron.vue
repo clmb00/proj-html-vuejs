@@ -13,8 +13,8 @@ export default{
 
       <div class="text_content">
         <h1>Devotion that never <span class="accent_text">ends</span></h1>
-        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
-        <button class="btn btn-pink">Read more</button>
+        <p class="content_text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+        <button class="btn btn_pink">Read more</button>
       </div>
 
     </div>
@@ -64,10 +64,6 @@ h1{
   line-height: 5rem;
   // Per allinearlo al p e button, visto che il font size grande sposta l'inizio delle prime lettere del h1
   margin-left: -3px;
-}
-
-p{
-  color: $text-grey-dark;
 }
 
 h1, p{

@@ -8,41 +8,46 @@ export default{
 
 <template>
 
-  <div class="container">
-    <h2>Working <span class="accent_text">process</span></h2>
+  <section>
 
-    <div class="wavy_line">
-      <div class="card">
-        <div class="logo_card">
-          <i class="fa-solid fa-lightbulb green_icon"></i>
+    <div class="container">
+      <h2>Working <span class="accent_text">process</span></h2>
+  
+      <div class="wavy_line">
+        <div class="card">
+          <div class="logo_card">
+            <i class="fa-solid fa-lightbulb green_icon"></i>
+          </div>
+          <h5>First Theres an idea</h5>
+          <p class="content_text">Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
         </div>
-        <h5>First Theres an idea</h5>
-        <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
-      </div>
-      <div class="card">
-        <div class="logo_card">
-          <i class="fa-regular fa-comment ylw_icon"></i>
+        <div class="card">
+          <div class="logo_card">
+            <i class="fa-regular fa-comment ylw_icon"></i>
+          </div>
+          <h5>Then we talk about</h5>
+          <p class="content_text">Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
         </div>
-        <h5>Then we talk about</h5>
-        <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
-      </div>
-      <div class="card">
-        <div class="logo_card">
-          <i class="fa-solid fa-cloud purp_icon"></i>
+        <div class="card">
+          <div class="logo_card">
+            <i class="fa-solid fa-cloud purp_icon"></i>
+          </div>
+          <h5>And we think about</h5>
+          <p class="content_text">Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
         </div>
-        <h5>And we think about</h5>
-        <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
-      </div>
-      <div class="card">
-        <div class="logo_card">
-          <i class="fa-solid fa-pen-ruler org_icon"></i>
+        <div class="card">
+          <div class="logo_card">
+            <i class="fa-solid fa-pen-ruler org_icon"></i>
+          </div>
+          <h5>So we draw along</h5>
+          <p class="content_text">Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
         </div>
-        <h5>So we draw along</h5>
-        <p>Lorem ipsum dolor sit, conetu adipisc sed be et ore aliqua pleasure itself.</p>
       </div>
+  
     </div>
 
-  </div>
+  </section>
+
 
 
 
@@ -57,18 +62,12 @@ export default{
   text-align: center;
 }
 
-h2{
-  font-size: 3.5rem;
-  font-weight: 400;
-}
-
 .wavy_line{
   background-image: url('../assets/svg/svg-3.svg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: 80%;
-  margin-top: 60px;
-  // width: 100%;
+  margin-top: 90px;
   display: flex;
   justify-content: space-between;
 
@@ -115,8 +114,6 @@ h2{
 
   p{
     font-size: .9rem;
-    line-height: 1.5rem;
-    color: $text-grey-dark;
   }
 }
 

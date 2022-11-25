@@ -65,11 +65,23 @@ body{
   padding: 16px 30px;
   border: 2px solid black;
   transition: all .4s ease-out;
-  transition-property: background-color, color;
-  &.btn-pink{
+  transition-property: background-color, color, border-color;
+  &.btn_pink{
     border-color: $back-pink-dark;
     &:hover{
       background-color: $back-pink-dark;
+      color: white;
+    }
+    &:active{
+      transform: scale(.96);
+    }
+  }
+  &.btn_green{
+    background-color: $back-green-light;
+    border-color: $back-green-light;
+    &:hover{
+      background-color: $back-pink-dark;
+      border-color: $back-pink-dark;
       color: white;
     }
     &:active{
@@ -81,4 +93,14 @@ body{
 span.accent_text{
   font-weight: 700;
   font-family: $accent-font;
+}
+
+p.content_text{
+  color: $text-grey-dark;
+  line-height: 1.5rem;
+}
+
+h2{
+  font-size: 3.5rem;
+  font-weight: 400;
 }
