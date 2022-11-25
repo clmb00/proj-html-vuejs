@@ -9,6 +9,12 @@ export default{
   data(){
     return{
       headerMenuItems: ['home', 'pages', 'portfolio', 'blog', 'shop', 'elements'],
+      contacts: {
+        email: 'maree.qode@gmail.com',
+        phone: '+44645 321 789',
+        address: "Avenue d'Auderghem 10",
+        city: '1040 Brussels, Belgium'
+      },
       activePage: 'home'
     }
   },
@@ -25,7 +31,7 @@ export default{
 
   <AppHeader :menuItems="headerMenuItems" :active="activePage"/>
   <AppMain/>
-  <AppFooter/>
+  <AppFooter :contacts="contacts"/>
 
 </template>
 
