@@ -67,7 +67,8 @@ export default{
   background-position: top;
   background-repeat: no-repeat;
   background-size: 80%;
-  margin-top: 90px;
+  margin-top: 80px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   overflow-x: auto;

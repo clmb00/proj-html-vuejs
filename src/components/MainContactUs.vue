@@ -13,7 +13,9 @@ export default{
     <div class="container">
       <h2>Want to work with us? Send us <span class="accent_text">a message!</span></h2>
       <p class="content_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo.</p>
-      <button class="btn btn_green_with_back">Contact</button>
+      <button class="btn btn_green">
+        <span>Contact</span>
+      </button>
     </div>
 
   </section>

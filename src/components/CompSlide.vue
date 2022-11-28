@@ -24,7 +24,9 @@ export default{
       <div class="text_content">
         <h1>{{title}}<span class="accent_text">{{accentTitle}}</span></h1>
         <p class="content_text">{{descr}}</p>
-        <button class="btn btn_pink">{{button}}</button>
+        <button class="btn btn_pink">
+          <span>{{button}}</span>
+        </button>
       </div>
     </div>
   
