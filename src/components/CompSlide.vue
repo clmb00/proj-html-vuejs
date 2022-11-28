@@ -55,6 +55,7 @@ export default{
 .slide{
   width: 100%;
   height: 100%;
+  display: flex;
   align-items: center;
   position: relative;
   transition: transform 1s ease, visibility 1s ease;
@@ -99,7 +100,7 @@ h1, p{
 .images_content{
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 8%;
   width: 50%;
   max-height: $jumbo-height;
   aspect-ratio: 1.7/1;
@@ -174,12 +175,12 @@ h1, p{
   h1, p{
   margin-bottom: 20px;
   }
-  .images_content{
-    top: 10%;
-  }
 }
 
 @media screen and (max-width: 768px) {
+  .container{
+    padding-left: 60px;
+  }
   .text_content{
     width: 100%;
     height: auto;
