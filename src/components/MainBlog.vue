@@ -85,7 +85,6 @@ article{
     top: -20px;
     left: 20px;
     text-align: center;
-    box-shadow: 0 0 5px 1px $black-trasparent;
     p:first-child{
       font-size: 2.1rem;
       background-color: $back-green-dark;
@@ -97,8 +96,26 @@ article{
       font-size: .7rem;
       font-weight: 700;
       background-color: $back-pink-normal;
-      padding-top: 6px;
-      padding-bottom: 12px;
+      position: relative;
+      padding-block: 5px;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        height: 15px;
+        background: linear-gradient(to top left, rgba(0,0,0,0) 0%, rgba(0,0,0,0)48%, $black-trasparent 48%, $back-pink-normal 52%, $back-pink-normal 100%);
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        height: 15px;
+        background: linear-gradient(to top right, rgba(0,0,0,0) 0%, rgba(0,0,0,0)48%, $black-trasparent 48%, $back-pink-normal 52%, $back-pink-normal 100%);
+      }
     }
   }
 }
