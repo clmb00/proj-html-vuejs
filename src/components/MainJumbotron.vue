@@ -106,7 +106,7 @@ export default{
 @use '../styles/partials/variables' as *;
 
 .jumbotron{
-  height: $jumbo-height;
+  min-height: $jumbo-height;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -157,5 +157,6 @@ export default{
     }
   }
 }
+
 
 </style>

@@ -92,4 +92,19 @@ header{
   }
 }
 
+@media screen and (max-width: 992px) {
+  #header_nav{
+    --spacing-btw-elements: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  #header_nav{
+    .menu_nav{
+      display: none;
+    }
+  }
+}
+
 </style>

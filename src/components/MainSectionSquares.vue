@@ -81,15 +81,14 @@ export default{
   }
   .sq_descr{
     position: absolute;
-    top: calc(50% - 60px);
+    top: 40%;
     left: 0;
-    height: 100px;
-    padding-top: 18px;
+    padding-block: 18px;
     padding-inline: 22px;
     background-color: $white;
     box-shadow: 3px 0 3px .5px $black-trasparent;
     transition: all .8s ease;
-    transform: translateX(-102%);
+    transform: translateX(-105%);
     h3{
       font-size: 1.3rem;
       font-weight: 400;
@@ -110,6 +109,39 @@ export default{
       transform: translateX(0) scaleX(1);
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+
+  .squares_container{
+    .sq_descr{
+      padding-block: 10px;
+      padding-inline: 12px;
+      h3{
+        font-size: 1rem;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .squares_container{
+    .sq_descr{
+      padding-block: 5px;
+      padding-inline: 6px;
+      h3{
+        font-size: .7rem;
+        margin-bottom: 3px;
+      }
+      p{
+        font-size: .6rem;
+      }
+    }
+  }
+
 }
 
 </style>

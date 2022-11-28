@@ -109,4 +109,37 @@ footer{
   }
 }
 
+@media screen and (max-width: 992px) {
+  .grid{
+    grid-template-columns: auto auto;
+    p:nth-child(3){
+      order: 1;
+    }
+    div{
+      order: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .container{
+    --gap-columns: 4vw;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+
+  .container{
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .grid{
+    grid-template-columns: auto;
+    width: 60%;
+    row-gap: 20px;
+  }
+}
+
 </style>

@@ -125,4 +125,11 @@ h2{
   font-weight: 400;
 }
 
-// 992 breakpoint
+@media screen and (max-width: 768px) {
+
+  .container{
+    width: 95%;
+
+    padding-inline: 30px;
+  }
+}

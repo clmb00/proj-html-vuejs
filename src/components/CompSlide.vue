@@ -53,10 +53,8 @@ export default{
 .slide{
   width: 100%;
   height: 100%;
-  // flex-shrink: 0;
   align-items: center;
   position: relative;
-  // display: none;
   transition: transform 1s ease, visibility 1s ease;
   background-color: white;
   position: absolute;
@@ -164,6 +162,55 @@ h1, p{
     bottom: 0;
     left: 13%;
   }
+}
+
+@media screen and (max-width: 992px) {
+  h1{
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  h1, p{
+  margin-bottom: 20px;
+  }
+  .images_content{
+    top: 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .text_content{
+    width: 100%;
+    height: auto;
+  }
+  .images_content{
+    position: relative;
+    width: 80%;
+    height: 50%;
+    left: 0;
+    top: 0;
+  }
+  .slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  
+  h1{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  h1, p{
+  margin-bottom: 10px;
+  }
+  p{
+    font-size: .8rem;
+  }
+
 }
 
 </style>

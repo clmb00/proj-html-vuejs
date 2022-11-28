@@ -88,4 +88,14 @@ article{
   }
 }
 
+@media screen and (max-width: 768px) {
+
+  article{
+    width: 90%;
+    img{
+      max-height: none;
+    }
+  }
+}
+
 </style>

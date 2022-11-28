@@ -70,10 +70,10 @@ export default{
   margin-top: 90px;
   display: flex;
   justify-content: space-between;
-
+  overflow-x: auto;
   .card{
     text-align: center;
-    padding-inline: 5px;
+    padding-inline: 10px;
     cursor: pointer;
     &:hover .logo_card{
       transform: scale(1.1);
@@ -115,6 +115,20 @@ export default{
   p{
     font-size: .9rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+
+  .wavy_line{
+    background: none;
+
+    .logo_card{
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+    }
+  }
+
 }
 
 </style>
