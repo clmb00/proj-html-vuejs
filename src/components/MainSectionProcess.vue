@@ -48,9 +48,6 @@ export default{
 
   </section>
 
-
-
-
 </template>
 
 <style lang="scss" scoped>
@@ -119,7 +116,6 @@ export default{
 }
 
 @media screen and (max-width: 768px) {
-
   .wavy_line{
     background: none;
 
@@ -129,7 +125,6 @@ export default{
       line-height: 100px;
     }
   }
-
 }
 
 </style>

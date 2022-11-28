@@ -33,6 +33,10 @@ export default{
         this.startTimeOut()
       }
     },
+    circleSlide(btnPage){
+      if (btnPage == this.prevSlider) this.slide('left');
+      else if (btnPage == this.nextSlider) this.slide('right');
+    },
     startTimeOut(){
       this.onTimeout = true
       setTimeout(()=>{
@@ -94,9 +98,9 @@ export default{
   </div>
 
   <div class="pagSlider">
-    <div class="pag" :class="{'active' : indexSlider == 1}"></div>
-    <div class="pag" :class="{'active' : indexSlider == 2}"></div>
-    <div class="pag" :class="{'active' : indexSlider == 3}"></div>
+    <div class="pag" :class="{'active' : indexSlider == 1}" @click="circleSlide(1)"></div>
+    <div class="pag" :class="{'active' : indexSlider == 2}" @click="circleSlide(2)"></div>
+    <div class="pag" :class="{'active' : indexSlider == 3}" @click="circleSlide(3)"></div>
   </div>
 
 </template>

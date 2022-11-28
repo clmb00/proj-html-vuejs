@@ -180,7 +180,6 @@ h1, p{
 }
 
 @media screen and (max-width: 768px) {
-  
   .text_content{
     width: 100%;
     height: auto;
@@ -197,11 +196,9 @@ h1, p{
     flex-direction: column;
     justify-content: center;
   }
-
 }
 
 @media screen and (max-width: 576px) {
-  
   h1{
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -212,7 +209,6 @@ h1, p{
   p{
     font-size: .8rem;
   }
-
 }
 
 </style>

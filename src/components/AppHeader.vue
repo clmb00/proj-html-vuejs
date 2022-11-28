@@ -99,7 +99,6 @@ header{
 }
 
 @media screen and (max-width: 768px) {
-
   #header_nav{
     .menu_nav{
       display: none;

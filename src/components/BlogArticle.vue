@@ -8,6 +8,11 @@ export default{
     dateDay: Number,
     dateMonth: String,
     imgBack: String
+  },
+  computed: {
+    byAuthor(){
+      return 'By ' + this.author
+    }
   }
 }
 </script>
@@ -17,7 +22,7 @@ export default{
   <article>
     <img :src="'src/assets/img/' + imgBack" :alt="imgBack">
     <h3>{{title}}</h3>
-    <p>{{author}}</p>
+    <p>{{byAuthor}}</p>
     <div class="tag">
       <p class="accent_text">{{dateDay}}</p>
       <p>{{dateMonth}}</p>
@@ -94,6 +99,9 @@ article{
     width: 90%;
     img{
       max-height: none;
+    }
+    h3{
+      font-weight: 700;
     }
   }
 }

@@ -16,7 +16,7 @@ export default{
         address: "Avenue d'Auderghem 10",
         city: '1040 Brussels, Belgium'
       },
-      activePage: 'home'
+      startPage: 'home'
     }
   },
   components:{
@@ -31,10 +31,9 @@ export default{
 
 <template>
 
-  <AppHeader :menuItems="headerMenuItems" :active="activePage"/>
+  <AppHeader :menuItems="headerMenuItems" :active="startPage"/>
   <AppMain/>
   <AppFooter :contacts="contacts"/>
-
   <AppScrollUp/>
 
 </template>

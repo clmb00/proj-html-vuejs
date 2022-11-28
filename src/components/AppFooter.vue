@@ -122,15 +122,12 @@ footer{
 }
 
 @media screen and (max-width: 768px) {
-
   .container{
     --gap-columns: 4vw;
   }
-
 }
 
 @media screen and (max-width: 576px) {
-
   .container{
     flex-direction: column;
     row-gap: 40px;

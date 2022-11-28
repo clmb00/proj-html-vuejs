@@ -112,7 +112,6 @@ export default{
 }
 
 @media screen and (max-width: 768px) {
-
   .squares_container{
     .sq_descr{
       padding-block: 10px;
@@ -123,11 +122,9 @@ export default{
       }
     }
   }
-
 }
 
 @media screen and (max-width: 576px) {
-
   .squares_container{
     .sq_descr{
       padding-block: 5px;
@@ -141,7 +138,6 @@ export default{
       }
     }
   }
-
 }
 
 </style>
